@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <a class="btn btn-secondary btn-sm mb-3" href="{% url 'polls:index' %}">Back To 
-    Polls</a>
-
     <h1 class="text-center mb-3">{{ question.question_text }}</h1>
 
     {% if error_message %}
@@ -30,6 +27,11 @@
 
         {% endfor %}
         <input type="submit" value="Vote" class="btn btn-success btn-lg btn-block mt-4" />
+
+        <br />
+        <br />
+        <center><a class="btn btn-secondary btn-sm mb-3" href="{% url 'polls:index' %}">Back To 
+        Polls</a></center>
     </form>
 
 {% endblock %}
